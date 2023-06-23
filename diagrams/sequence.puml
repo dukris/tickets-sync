@@ -1,0 +1,6 @@
+@startuml
+title Jira Integration API
+API -> Jira: scheduled/1d
+Jira--> API: completed tickets
+API -> Harvest: reports
+@enduml
