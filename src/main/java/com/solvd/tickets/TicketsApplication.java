@@ -11,13 +11,13 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 @ConfigurationPropertiesScan
 public class TicketsApplication {
 
-	/**
-	 * Application start.
-	 *
-	 * @param args String[]
-	 */
-	public static void main(String[] args) {
-		SpringApplication.run(TicketsApplication.class, args);
-	}
+    /**
+     * Application start.
+     *
+     * @param args String[]
+     */
+    public static void main(final String[] args) {
+        SpringApplication.run(TicketsApplication.class, args);
+    }
 
 }

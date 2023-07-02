@@ -15,6 +15,9 @@ import java.net.URI;
 @RequiredArgsConstructor
 public class JrConfig {
 
+    /**
+     * Jira properties.
+     */
     private final JrProperty property;
 
     /**

@@ -10,7 +10,14 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class JrTicket implements Ticket {
 
+    /**
+     * Id.
+     */
     private final String id;
+
+    /**
+     * Issue.
+     */
     private final Issue issue;
 
     @Override

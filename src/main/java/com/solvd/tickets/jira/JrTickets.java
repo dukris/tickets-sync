@@ -13,10 +13,13 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class JrTickets implements Tickets {
 
+    /**
+     * Jira client.
+     */
     private final JiraRestClient client;
 
     @Override
-    public Ticket ticket(String id) {
+    public Ticket ticket(final String id) {
         return new JrTicket(
                 id,
                 this.client.getIssueClient().getIssue(id).claim()
