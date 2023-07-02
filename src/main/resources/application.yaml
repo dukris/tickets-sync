@@ -1,1 +1,9 @@
+server:
+  port: 8080
+  shutdown: graceful
 
+jira:
+  username: ${JIRA_USERNAME}
+  token: ${JIRA_TOKEN}
+  uri: ${JIRA_URI}
+  project: ${JIRA_PROJECT}
