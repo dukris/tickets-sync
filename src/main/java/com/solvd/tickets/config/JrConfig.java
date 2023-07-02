@@ -23,7 +23,7 @@ public class JrConfig {
      * @return JiraRestClient
      */
     @Bean
-    public JiraRestClient jiraRestClient(){
+    public JiraRestClient jiraRestClient() {
         return new AsynchronousJiraRestClientFactory()
                 .createWithBasicHttpAuthentication(
                         URI.create(this.property.getUri()),
