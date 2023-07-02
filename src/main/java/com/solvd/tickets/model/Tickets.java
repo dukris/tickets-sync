@@ -1,19 +1,16 @@
 package com.solvd.tickets.model;
 
-import java.time.LocalDate;
-import java.util.List;
-
 /**
  * All tickets.
  */
 public interface Tickets {
 
     /**
-     * Get tickets by date.
+     * Get ticket by id.
      *
-     * @param date LocalDate
+     * @param id Id
      * @return List of tickets
      */
-    List<Ticket> byDate(LocalDate date);
+    Ticket ticket(String id);
 
 }
