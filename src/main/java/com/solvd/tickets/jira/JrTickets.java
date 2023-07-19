@@ -1,10 +1,15 @@
 package com.solvd.tickets.jira;
 
 import com.atlassian.jira.rest.client.api.JiraRestClient;
+import com.solvd.tickets.config.JrProperty;
 import com.solvd.tickets.model.Ticket;
 import com.solvd.tickets.model.Tickets;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Jira tickets.
@@ -18,11 +23,29 @@ public class JrTickets implements Tickets {
      */
     private final JiraRestClient client;
 
+    /**
+     * Jira properties.
+     */
+    private final JrProperty property;
+
     @Override
-    public Ticket ticket(final String id) {
-        return new JrTicket(
-                id,
-                this.client.getIssueClient().getIssue(id).claim()
-        );
+    public List<Ticket> byDate(LocalDate date) {
+        List<Ticket> tickets = new ArrayList<>();
+        this.client.getSearchClient()
+                .searchJql(String.format(
+                                "project=%s AND status=Done AND updated=%s",
+                                this.property.getProject(),
+                                date
+                        )
+                ).claim()
+                .getIssues()
+                .forEach(issue -> tickets.add(
+                                new JrTicket(
+                                        issue.getKey(),
+                                        issue.getSummary()
+                                )
+                        )
+                );
+        return tickets;
     }
 }
