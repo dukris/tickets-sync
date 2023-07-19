@@ -29,7 +29,7 @@ public class JrTickets implements Tickets {
     private final JrProperty property;
 
     @Override
-    public List<Ticket> byDate(LocalDate date) {
+    public List<Ticket> byDate(final LocalDate date) {
         List<Ticket> tickets = new ArrayList<>();
         this.client.getSearchClient()
                 .searchJql(String.format(
