@@ -1,6 +1,5 @@
 package com.solvd.tickets.jira;
 
-import com.atlassian.jira.rest.client.api.domain.Issue;
 import com.solvd.tickets.model.Ticket;
 import lombok.RequiredArgsConstructor;
 
@@ -18,7 +17,7 @@ public class JrTicket implements Ticket {
     /**
      * Issue.
      */
-    private final Issue issue;
+    private final String summary;
 
     @Override
     public String id() {
@@ -26,8 +25,8 @@ public class JrTicket implements Ticket {
     }
 
     @Override
-    public Issue issue() {
-        return this.issue;
+    public String summary() {
+        return this.summary;
     }
 
 }

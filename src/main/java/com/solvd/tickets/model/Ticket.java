@@ -1,7 +1,5 @@
 package com.solvd.tickets.model;
 
-import com.atlassian.jira.rest.client.api.domain.Issue;
-
 /**
  * Ticket.
  */
@@ -15,10 +13,10 @@ public interface Ticket {
     String id();
 
     /**
-     * Issue.
+     * Summary.
      *
-     * @return Issue
+     * @return Summary
      */
-    Issue issue();
+    String summary();
 
 }
