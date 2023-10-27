@@ -15,7 +15,7 @@
   <properties>
     <java.version>17</java.version>
     <maven-checkstyle-plugin.version>3.3.0</maven-checkstyle-plugin.version>
-    <jira-core.version>5.2.4</jira-core.version>
+    <jira-core.version>5.2.7</jira-core.version>
     <fugue.version>5.0.0</fugue.version>
   </properties>
   <dependencies>
