@@ -32,6 +32,8 @@ SOFTWARE.
     <maven-checkstyle-plugin.version>3.3.0</maven-checkstyle-plugin.version>
     <jira.version>5.2.1</jira.version>
     <atlassian.version>4.0.1</atlassian.version>
+    <cactoos-matchers.version>0.25</cactoos-matchers.version>
+
   </properties>
   <dependencies>
     <dependency>
@@ -71,6 +73,18 @@ SOFTWARE.
       <artifactId>spring-boot-starter-test</artifactId>
       <!-- version from parent -->
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.llorllale</groupId>
+      <artifactId>cactoos-matchers</artifactId>
+      <version>${cactoos-matchers.version}</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.cactoos</groupId>
+          <artifactId>cactoos</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   <build>
