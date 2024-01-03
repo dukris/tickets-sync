@@ -33,7 +33,6 @@ SOFTWARE.
     <jira.version>5.2.1</jira.version>
     <atlassian.version>4.0.1</atlassian.version>
     <cactoos-matchers.version>0.25</cactoos-matchers.version>
-
   </properties>
   <dependencies>
     <dependency>
