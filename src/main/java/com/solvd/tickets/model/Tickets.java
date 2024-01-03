@@ -8,12 +8,12 @@ import java.util.List;
  */
 public interface Tickets {
 
-    /**
-     * Retrieve all tickets be date.
-     *
-     * @param date LocalDate
-     * @return List of tickets
-     */
-    List<Ticket> byDate(LocalDate date);
+  /**
+   * Retrieve all tickets be date.
+   *
+   * @param date LocalDate
+   * @return List of tickets
+   */
+  List<Ticket> byDate(LocalDate date);
 
 }
