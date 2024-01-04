@@ -15,7 +15,16 @@
  * SOFTWARE.
  */
 
+package com.solvd.tickets.jobs;
+
 /**
- * Tickets.
+ * Scheduled Job.
  */
-package com.solvd.tickets;
+public interface Job {
+
+  /**
+   * Scheduled method.
+   */
+  void schedule();
+
+}

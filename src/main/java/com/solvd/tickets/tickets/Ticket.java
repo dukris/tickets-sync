@@ -15,7 +15,25 @@
  * SOFTWARE.
  */
 
+package com.solvd.tickets.tickets;
+
 /**
- * Tickets.
+ * Ticket.
  */
-package com.solvd.tickets;
+public interface Ticket {
+
+  /**
+   * Id.
+   *
+   * @return Id
+   */
+  String id();
+
+  /**
+   * Summary.
+   *
+   * @return Summary
+   */
+  String summary();
+
+}

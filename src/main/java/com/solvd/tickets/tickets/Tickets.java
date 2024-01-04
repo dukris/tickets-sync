@@ -15,7 +15,22 @@
  * SOFTWARE.
  */
 
+package com.solvd.tickets.tickets;
+
+import java.time.LocalDate;
+import java.util.List;
+
 /**
- * Tickets.
+ * All tickets.
  */
-package com.solvd.tickets;
+public interface Tickets {
+
+  /**
+   * Retrieve all tickets be date.
+   *
+   * @param date LocalDate
+   * @return List of tickets
+   */
+  List<Ticket> byDate(LocalDate date);
+
+}

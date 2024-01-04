@@ -15,7 +15,35 @@
  * SOFTWARE.
  */
 
+package com.solvd.tickets.source.jira;
+
+import com.solvd.tickets.tickets.Ticket;
+import lombok.RequiredArgsConstructor;
+
 /**
- * Tickets.
+ * Jira ticket.
  */
-package com.solvd.tickets;
+@RequiredArgsConstructor
+public class JiraTicket implements Ticket {
+
+  /**
+   * Id.
+   */
+  private final String id;
+
+  /**
+   * Issue.
+   */
+  private final String summary;
+
+  @Override
+  public String id() {
+    return this.id;
+  }
+
+  @Override
+  public String summary() {
+    return this.summary;
+  }
+
+}

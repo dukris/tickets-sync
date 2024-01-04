@@ -15,28 +15,41 @@
  * SOFTWARE.
  */
 
-package com.solvd.tickets;
+package com.solvd.tickets.source.jira;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
-import org.springframework.scheduling.annotation.EnableScheduling;
+import com.atlassian.jira.rest.client.api.JiraRestClient;
+import com.atlassian.jira.rest.client.internal.async.AsynchronousJiraRestClientFactory;
+import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import java.net.URI;
 
 /**
- * Application.
+ * Jira configuration.
  */
-@EnableScheduling
-@SpringBootApplication
-@ConfigurationPropertiesScan
-public class TicketsApplication {
+@Configuration
+@RequiredArgsConstructor
+public class JiraConfig {
 
-    /**
-     * Application start.
-     *
-     * @param args String[]
-     */
-    public static void main(final String[] args) {
-        SpringApplication.run(TicketsApplication.class, args);
-    }
+  /**
+   * Jira properties.
+   */
+  private final JiraProperty property;
+
+  /**
+   * Create JiraRestClient.
+   *
+   * @return JiraRestClient
+   */
+  @Bean
+  public JiraRestClient client() {
+    return new AsynchronousJiraRestClientFactory()
+      .createWithBasicHttpAuthentication(
+        URI.create(this.property.getUri()),
+        this.property.getUsername(),
+        this.property.getToken()
+      );
+  }
 
 }

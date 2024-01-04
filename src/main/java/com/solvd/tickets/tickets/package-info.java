@@ -16,6 +16,6 @@
  */
 
 /**
- * Tickets.
+ * Models.
  */
-package com.solvd.tickets;
+package com.solvd.tickets.tickets;

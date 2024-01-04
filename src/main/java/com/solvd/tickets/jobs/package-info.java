@@ -16,6 +16,6 @@
  */
 
 /**
- * Tickets.
+ * Scheduled jobs.
  */
-package com.solvd.tickets;
+package com.solvd.tickets.jobs;

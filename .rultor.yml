@@ -5,3 +5,8 @@ docker:
 merge:
   script:
     - "mvn clean install --errors --batch-mode"
+  # @todo #16:30min Fix ArtifactResolutionException.
+  #  We should fix such exception in order to be able to merge
+  #  pull requests. The exception message is: could not find artifact
+  #  com.atlassian.jira:jira-rest-java-client-core:jar:5.2.1 in Maven
+  #  (https://repo.maven.apache.org/maven2)
