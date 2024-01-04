@@ -1,7 +1,7 @@
 architect:
   - hizmailovich
 docker:
-  image: l3r8y/rultor-image:1.0.3
+  image: yegor256/rultor-image:1.22.0
 merge:
   script:
     - "mvn clean install --errors --batch-mode"
