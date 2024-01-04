@@ -15,22 +15,38 @@
  * SOFTWARE.
  */
 
-package com.solvd.tickets.model;
+package com.solvd.tickets.source.jira;
 
-import java.time.LocalDate;
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * All tickets.
+ * Jira properties.
  */
-public interface Tickets {
+@Getter
+@AllArgsConstructor
+@ConfigurationProperties(prefix = "jira")
+public class JiraProperty {
 
   /**
-   * Retrieve all tickets be date.
-   *
-   * @param date LocalDate
-   * @return List of tickets
+   * Username.
    */
-  List<Ticket> byDate(LocalDate date);
+  private final String username;
+
+  /**
+   * Token.
+   */
+  private final String token;
+
+  /**
+   * Uri.
+   */
+  private final String uri;
+
+  /**
+   * Project's id.
+   */
+  private final String project;
 
 }

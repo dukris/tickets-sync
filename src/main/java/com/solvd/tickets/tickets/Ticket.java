@@ -15,41 +15,25 @@
  * SOFTWARE.
  */
 
-package com.solvd.tickets.jira;
-
-import com.atlassian.jira.rest.client.api.JiraRestClient;
-import com.atlassian.jira.rest.client.internal.async.AsynchronousJiraRestClientFactory;
-import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
-import java.net.URI;
+package com.solvd.tickets.tickets;
 
 /**
- * Jira configuration.
+ * Ticket.
  */
-@Configuration
-@RequiredArgsConstructor
-public class JiraConfig {
+public interface Ticket {
 
   /**
-   * Jira properties.
-   */
-  private final JiraProperty property;
-
-  /**
-   * Create JiraRestClient.
+   * Id.
    *
-   * @return JiraRestClient
+   * @return Id
    */
-  @Bean
-  public JiraRestClient client() {
-    return new AsynchronousJiraRestClientFactory()
-      .createWithBasicHttpAuthentication(
-        URI.create(this.property.getUri()),
-        this.property.getUsername(),
-        this.property.getToken()
-      );
-  }
+  String id();
+
+  /**
+   * Summary.
+   *
+   * @return Summary
+   */
+  String summary();
 
 }

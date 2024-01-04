@@ -18,4 +18,4 @@
 /**
  * Jira Integration.
  */
-package com.solvd.tickets.jira;
+package com.solvd.tickets.source.jira;

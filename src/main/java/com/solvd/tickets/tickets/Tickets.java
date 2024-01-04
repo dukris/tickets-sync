@@ -15,35 +15,22 @@
  * SOFTWARE.
  */
 
-package com.solvd.tickets.jira;
+package com.solvd.tickets.tickets;
 
-import com.solvd.tickets.model.Ticket;
-import lombok.RequiredArgsConstructor;
+import java.time.LocalDate;
+import java.util.List;
 
 /**
- * Jira ticket.
+ * All tickets.
  */
-@RequiredArgsConstructor
-public class JiraTicket implements Ticket {
+public interface Tickets {
 
   /**
-   * Id.
+   * Retrieve all tickets be date.
+   *
+   * @param date LocalDate
+   * @return List of tickets
    */
-  private final String id;
-
-  /**
-   * Issue.
-   */
-  private final String summary;
-
-  @Override
-  public String id() {
-    return this.id;
-  }
-
-  @Override
-  public String summary() {
-    return this.summary;
-  }
+  List<Ticket> byDate(LocalDate date);
 
 }

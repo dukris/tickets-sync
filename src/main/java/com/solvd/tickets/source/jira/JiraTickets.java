@@ -15,11 +15,11 @@
  * SOFTWARE.
  */
 
-package com.solvd.tickets.jira;
+package com.solvd.tickets.source.jira;
 
 import com.atlassian.jira.rest.client.api.JiraRestClient;
-import com.solvd.tickets.model.Ticket;
-import com.solvd.tickets.model.Tickets;
+import com.solvd.tickets.tickets.Ticket;
+import com.solvd.tickets.tickets.Tickets;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

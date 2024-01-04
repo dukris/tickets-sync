@@ -17,8 +17,8 @@
 
 package com.solvd.tickets.jobs;
 
-import com.solvd.tickets.model.Ticket;
-import com.solvd.tickets.model.Tickets;
+import com.solvd.tickets.tickets.Ticket;
+import com.solvd.tickets.tickets.Tickets;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
