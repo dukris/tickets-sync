@@ -43,7 +43,8 @@ public class RetrieveTickets implements Job {
   public void schedule() {
     List<Ticket> issues = this.tickets.byDate(LocalDate.now());
     /*
-     * @todo #16:60min/DEV send issues to Harvest.
+     * @todo #16:60min/DEV export tickets to Harvest.
+     *   We need to send the tickets to Harvest using appropriate API.
      */
   }
 
