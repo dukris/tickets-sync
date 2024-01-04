@@ -20,7 +20,7 @@ SOFTWARE.
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.1.5</version>
+    <version>3.2.1</version>
     <relativePath/>
   </parent>
   <groupId>com.solvd</groupId>
@@ -91,6 +91,7 @@ SOFTWARE.
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${project.parent.version}</version>
         <configuration>
           <excludes>
             <exclude>
@@ -118,10 +119,6 @@ SOFTWARE.
     </plugins>
   </build>
   <repositories>
-    <repository>
-      <id>central</id>
-      <url>https://repo.maven.apache.org/maven2</url>
-    </repository>
     <repository>
       <id>atlassian-public</id>
       <url>https://packages.atlassian.com/maven/repository/public</url>
