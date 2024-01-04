@@ -30,7 +30,7 @@ SOFTWARE.
   <properties>
     <java.version>17</java.version>
     <maven-checkstyle-plugin.version>3.3.0</maven-checkstyle-plugin.version>
-    <jira.version>5.2.1</jira.version>
+    <jira.version>5.2.7</jira.version>
     <atlassian.version>4.0.1</atlassian.version>
     <cactoos-matchers.version>0.25</cactoos-matchers.version>
   </properties>
