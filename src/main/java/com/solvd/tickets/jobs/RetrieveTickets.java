@@ -44,7 +44,8 @@ public class RetrieveTickets implements Job {
     List<Ticket> issues = this.tickets.byDate(LocalDate.now());
     /*
      * @todo #16:60min/DEV export tickets to Harvest.
-     *   We need to send the tickets to Harvest using appropriate API.
+     *   We need to create a separate object which will send these tickets to
+     *   Harvest using appropriate API.
      */
   }
 
